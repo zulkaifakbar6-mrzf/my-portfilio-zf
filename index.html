@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- ═══════════════════════════════════════════════════════════════════════
+     ZULKAIF AKBAR — PERSONAL PORTFOLIO
+     Theme: Professional · Tech · Luxury · Minimalist
+     ─────────────────────────────────────────────────────────────────────
+     HOW TO ADD YOUR PROFILE PHOTO:
+     1) Find  <img id="profile-photo" ... >  in this file
+     2) Replace  src=""  with  src="your-photo.jpg"
+        (keep the photo file in the same folder as this HTML)
+        OR paste a base64 data-URI:  src="data:image/jpeg;base64,...."
+     Until then, an elegant "ZA" monogram is shown automatically.
+     ───────────────────────────────────────────────────────────────────── -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zulkaif Akbar — E-Commerce · Digital Marketing · AI</title>
+<meta name="description" content="Portfolio of Zulkaif Akbar — BS E-Commerce student at University of Kamalia. Google Certified in Business Intelligence, AI Essentials, Analytics, Prompt Engineering & Cybersecurity. Book a session today.">
+<meta name="author" content="Zulkaif Akbar">
+<meta property="og:title" content="Zulkaif Akbar — Portfolio">
+<meta property="og:description" content="BS E-Commerce @ University of Kamalia · Google Certified · Book an appointment">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B0B10'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' font-weight='700' fill='%23D6B25E' text-anchor='middle'%3EZ%3C/text%3E%3Crect x='12' y='52' width='40' height='2.5' fill='%23D6B25E'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+/* ════════════════════════════════════════════════
+   DESIGN TOKENS — Luxury Tech Minimalist
+   ════════════════════════════════════════════════ */
+:root{
+  --bg:#0A0A0E;
+  --bg-2:#0E0E14;
+  --surface:rgba(255,255,255,.028);
+  --surface-2:rgba(255,255,255,.05);
+  --line:rgba(255,255,255,.085);
+  --line-gold:rgba(214,178,94,.32);
+  --gold:#D6B25E;
+  --gold-soft:#E8CE8F;
+  --gold-deep:#A97E2F;
+  --gold-grad:linear-gradient(120deg,#F1DCA6 0%,#D6B25E 42%,#A97E2F 100%);
+  --text:#EDEBE3;
+  --muted:#9B998F;
+  --muted-2:#6E6C64;
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --mono:'Space Grotesk','Inter',monospace;
+  --ease:cubic-bezier(.22,.8,.28,1);
+  --radius:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--sans);
+  font-weight:400;
+  line-height:1.7;
+  letter-spacing:.01em;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:rgba(214,178,94,.28);color:#fff}
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:#26241f;border-radius:6px;border:2px solid var(--bg)}
+::-webkit-scrollbar-thumb:hover{background:var(--gold-deep)}
+
+/* ── Ambient background ─────────────────────── */
+.bg-fx{position:fixed;inset:0;z-index:-2;pointer-events:none;overflow:hidden}
+.bg-fx::before{ /* fine grain */
+  content:'';position:absolute;inset:0;opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .03 0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.glow{position:absolute;border-radius:50%;filter:blur(90px);opacity:.16}
+.glow-1{width:620px;height:620px;background:#8a6c2e;top:-220px;right:-140px}
+.glow-2{width:520px;height:520px;background:#2e3d8a;bottom:-200px;left:-180px;opacity:.14}
+.glow-3{width:420px;height:420px;background:#8a6c2e;top:52%;left:44%;opacity:.07}
+.hairline-v{position:fixed;top:0;bottom:0;width:1px;background:linear-gradient(180deg,transparent,rgba(214,178,94,.13) 30%,rgba(214,178,94,.13) 70%,transparent);z-index:-1;pointer-events:none}
+.hv-1{left:6%}.hv-2{right:6%}
+@media(max-width:900px){.hairline-v{display:none}}
+
+/* ── Typography helpers ─────────────────────── */
+.wrap{width:min(1180px,92%);margin:0 auto;position:relative}
+.eyebrow{
+  font-family:var(--mono);font-size:.72rem;font-weight:500;
+  letter-spacing:.42em;text-transform:uppercase;color:var(--gold);
+  display:inline-flex;align-items:center;gap:14px;
+}
+.eyebrow::before{content:'';width:34px;height:1px;background:var(--gold-grad)}
+.h-sec{
+  font-family:var(--serif);font-weight:600;font-size:clamp(2rem,4.2vw,3.1rem);
+  line-height:1.14;letter-spacing:.005em;margin:18px 0 0;
+}
+.h-sec em{font-style:italic;color:transparent;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text}
+.lead{color:var(--muted);font-size:1.02rem;font-weight:300;max-width:60ch}
+
+/* ── Reveal animations (only when JS is active) ── */
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+.rv-d1{transition-delay:.12s}.rv-d2{transition-delay:.24s}.rv-d3{transition-delay:.36s}.rv-d4{transition-delay:.48s}
+
+/* ── Navigation ─────────────────────────────── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  transition:background .5s var(--ease),border-color .5s var(--ease),backdrop-filter .5s;
+  border-bottom:1px solid transparent;
+}
+nav.scrolled{background:rgba(10,10,14,.78);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom-color:var(--line)}
+.nav-in{width:min(1180px,92%);margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:82px}
+.logo{display:flex;align-items:center;gap:13px;text-decoration:none}
+.logo-mark{
+  width:42px;height:42px;border-radius:12px;position:relative;flex:none;
+  background:var(--bg-2);border:1px solid var(--line-gold);
+  display:grid;place-items:center;font-family:var(--serif);font-weight:700;
+  font-size:1.15rem;color:var(--gold);letter-spacing:.02em;
+}
+.logo-mark::after{content:'';position:absolute;inset:4px;border-radius:8px;border:1px solid rgba(214,178,94,.14)}
+.logo-txt{display:flex;flex-direction:column;line-height:1.15}
+.logo-txt b{font-family:var(--serif);font-size:1.02rem;font-weight:700;letter-spacing:.04em;color:var(--text)}
+.logo-txt span{font-family:var(--mono);font-size:.58rem;letter-spacing:.34em;text-transform:uppercase;color:var(--muted-2)}
+.nav-links{display:flex;align-items:center;gap:36px;list-style:none}
+.nav-links a{
+  color:var(--muted);text-decoration:none;font-size:.8rem;font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;position:relative;padding:6px 0;
+  transition:color .35s;
+}
+.nav-links a::after{content:'';position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold-grad);transition:width .4s var(--ease)}
+.nav-links a:hover,.nav-links a.active{color:var(--text)}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-cta{
+  display:inline-flex;align-items:center;gap:9px;padding:11px 22px;border-radius:100px;
+  font-size:.74rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:#141005;text-decoration:none;background:var(--gold-grad);
+  box-shadow:0 8px 28px -8px rgba(214,178,94,.45);
+  transition:transform .4s var(--ease),box-shadow .4s;
+}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 14px 34px -8px rgba(214,178,94,.6)}
+.burger{display:none;background:none;border:0;cursor:pointer;width:40px;height:40px;position:relative;z-index:110}
+.burger span{display:block;width:24px;height:1.6px;background:var(--text);margin:6px auto;transition:.4s var(--ease)}
+.burger.open span:nth-child(1){transform:translateY(7.6px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7.6px) rotate(-45deg)}
+@media(max-width:920px){
+  .nav-links{
+    position:fixed;inset:0;background:rgba(8,8,12,.97);backdrop-filter:blur(20px);
+    flex-direction:column;justify-content:center;gap:30px;
+    opacity:0;pointer-events:none;transition:opacity .45s var(--ease);
+  }
+  .nav-links.show{opacity:1;pointer-events:auto}
+  .nav-links a{font-size:1.05rem}
+  .nav-cta{display:none}
+  .burger{display:block}
+}
+/* ── HERO ───────────────────────────────────── */
+.hero{min-height:100vh;display:flex;align-items:center;padding:130px 0 90px;position:relative}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
+.hero-status{
+  display:inline-flex;align-items:center;gap:10px;padding:9px 18px;border-radius:100px;
+  border:1px solid var(--line-gold);background:var(--surface);
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-soft);
+}
+.hero-status .dot{width:7px;height:7px;border-radius:50%;background:#59d98c;box-shadow:0 0 12px #59d98c;animation:pulse 2.2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.hero h1{
+  font-family:var(--serif);font-weight:700;font-size:clamp(3rem,7vw,5.4rem);
+  line-height:1.04;margin:26px 0 8px;letter-spacing:.002em;
+}
+.hero h1 .row2{font-style:italic;font-weight:600;color:transparent;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text}
+.hero-role{
+  display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:18px 0 22px;
+  font-family:var(--mono);font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);
+}
+.hero-role i{color:var(--gold);font-size:.5rem}
+.hero-pitch{max-width:54ch;color:var(--muted);font-weight:300;font-size:1.03rem}
+.hero-pitch b{color:var(--text);font-weight:500}
+.hero-actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:38px}
+.btn{
+  display:inline-flex;align-items:center;gap:11px;padding:16px 30px;border-radius:100px;
+  font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;
+  transition:transform .4s var(--ease),box-shadow .4s,background .4s,color .4s,border-color .4s;cursor:pointer;border:0;
+}
+.btn-gold{color:#141005;background:var(--gold-grad);box-shadow:0 10px 30px -8px rgba(214,178,94,.5)}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 18px 40px -10px rgba(214,178,94,.65)}
+.btn-line{color:var(--text);border:1px solid var(--line);background:var(--surface)}
+.btn-line:hover{border-color:var(--line-gold);color:var(--gold-soft);transform:translateY(-3px);background:var(--surface-2)}
+.hero-contact{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.chip{
+  display:inline-flex;align-items:center;gap:9px;padding:9px 16px;border-radius:100px;
+  border:1px solid var(--line);background:var(--surface);color:var(--muted);
+  font-size:.78rem;letter-spacing:.05em;text-decoration:none;transition:.35s var(--ease);
+}
+.chip i{color:var(--gold);font-size:.75rem}
+.chip:hover{border-color:var(--line-gold);color:var(--text);transform:translateY(-2px)}
+/* stats */
+.hero-stats{display:flex;gap:0;margin-top:52px;border-top:1px solid var(--line);padding-top:28px;max-width:560px}
+.stat{flex:1;padding-right:22px}
+.stat+.stat{padding-left:22px;border-left:1px solid var(--line)}
+.stat b{font-family:var(--serif);font-size:2.1rem;font-weight:700;display:block;line-height:1;color:transparent;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text}
+.stat span{font-family:var(--mono);font-size:.6rem;letter-spacing:.26em;text-transform:uppercase;color:var(--muted-2);display:block;margin-top:9px}
+/* portrait */
+.portrait-zone{display:flex;justify-content:center;position:relative}
+.portrait{position:relative;width:min(400px,88%);animation:float 7s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+.portrait-ring{
+  position:relative;border-radius:50%;padding:6px;
+  background:conic-gradient(from 210deg,#F1DCA6,#A97E2F,#5b4416,#D6B25E,#F1DCA6);
+  box-shadow:0 30px 80px -20px rgba(0,0,0,.8),0 0 70px -18px rgba(214,178,94,.4);
+}
+.portrait-ring::before{content:'';position:absolute;inset:-16px;border-radius:50%;border:1px dashed rgba(214,178,94,.28);animation:spin 40s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.portrait-inner{
+  border-radius:50%;overflow:hidden;aspect-ratio:1;position:relative;
+  background:radial-gradient(circle at 32% 26%,#1d1c26,#0d0d13 68%);
+  border:1px solid rgba(10,10,14,.9);
+}
+.portrait-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.avatar-fallback{
+  position:absolute;inset:0;display:grid;place-items:center;
+  font-family:var(--serif);font-weight:700;font-size:clamp(4rem,9vw,6.4rem);
+  color:transparent;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;
+  letter-spacing:.02em;text-shadow:0 20px 60px rgba(214,178,94,.25);
+}
+.avatar-fallback small{display:block;text-align:center;font-family:var(--mono);font-size:.6rem;letter-spacing:.4em;color:var(--muted-2);-webkit-text-fill-color:var(--muted-2);text-shadow:none;margin-top:14px;text-transform:uppercase}
+.portrait-chip{
+  position:absolute;display:flex;align-items:center;gap:11px;padding:13px 19px;border-radius:15px;
+  background:rgba(16,16,22,.86);backdrop-filter:blur(12px);border:1px solid var(--line-gold);
+  box-shadow:0 18px 44px -14px rgba(0,0,0,.75);
+  font-size:.74rem;font-weight:500;letter-spacing:.05em;white-space:nowrap;z-index:3;
+}
+.portrait-chip i{width:32px;height:32px;border-radius:9px;display:grid;place-items:center;background:rgba(214,178,94,.13);color:var(--gold);font-size:.85rem}
+.portrait-chip b{display:block;font-size:.8rem;color:var(--text)}
+.portrait-chip span{font-family:var(--mono);font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted-2)}
+.pc-1{top:7%;left:-14%;animation:float 7s ease-in-out .8s infinite}
+.pc-2{bottom:11%;right:-12%;animation:float 7s ease-in-out 1.6s infinite}
+@media(max-width:980px){
+  .hero-grid{grid-template-columns:1fr;gap:70px;text-align:center}
+  .hero{padding-top:150px}
+  .portrait-zone{order:-1}
+  .hero-status{margin:0 auto}
+  .hero-role{justify-content:center}
+  .hero-pitch{margin:0 auto}
+  .hero-actions,.hero-contact{justify-content:center}
+  .hero-stats{margin:52px auto 0}
+  .pc-1{left:-4%}.pc-2{right:-4%}
+}
+
+/* ── Section shell ──────────────────────────── */
+section{position:relative;padding:110px 0}
+.sec-head{margin-bottom:58px}
+.sec-head .lead{margin-top:20px}
+
+/* ── ABOUT ──────────────────────────────────── */
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:start}
+.about-copy p{color:var(--muted);font-weight:300;margin-bottom:20px;font-size:1rem}
+.about-copy p b{color:var(--text);font-weight:500}
+.about-quote{
+  margin-top:34px;padding:26px 30px;border-left:2px solid var(--gold);border-radius:0 var(--radius) var(--radius) 0;
+  background:linear-gradient(90deg,rgba(214,178,94,.07),transparent 65%);
+  font-family:var(--serif);font-style:italic;font-size:1.14rem;color:var(--gold-soft);line-height:1.55;
+}
+.fact-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fact{
+  padding:20px 22px;border-radius:var(--radius);border:1px solid var(--line);background:var(--surface);
+  transition:.4s var(--ease);
+}
+.fact:hover{border-color:var(--line-gold);background:var(--surface-2);transform:translateY(-3px)}
+.fact .k{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:.6rem;letter-spacing:.26em;text-transform:uppercase;color:var(--muted-2)}
+.fact .k i{color:var(--gold);font-size:.8rem}
+.fact .v{margin-top:9px;font-size:.92rem;font-weight:500;color:var(--text);word-break:break-word}
+.fact .v a{color:inherit;text-decoration:none;transition:color .3s}
+.fact .v a:hover{color:var(--gold-soft)}
+@media(max-width:920px){.about-grid{grid-template-columns:1fr;gap:40px}}
+
+/* ── EDUCATION ──────────────────────────────── */
+.edu-card{
+  display:grid;grid-template-columns:auto 1fr auto;gap:34px;align-items:center;
+  padding:44px 46px;border-radius:22px;border:1px solid var(--line);
+  background:linear-gradient(135deg,rgba(214,178,94,.06),rgba(255,255,255,.015) 55%);
+  position:relative;overflow:hidden;
+}
+.edu-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:var(--gold-grad);opacity:.55}
+.edu-ico{
+  width:78px;height:78px;border-radius:20px;display:grid;place-items:center;font-size:1.9rem;color:var(--gold);
+  background:rgba(214,178,94,.1);border:1px solid var(--line-gold);flex:none;
+}
+.edu-mid h3{font-family:var(--serif);font-size:1.5rem;font-weight:700;letter-spacing:.01em}
+.edu-mid .uni{color:var(--gold-soft);font-size:.95rem;margin-top:4px;font-weight:500}
+.edu-mid .desc{color:var(--muted);font-weight:300;font-size:.92rem;margin-top:12px;max-width:62ch}
+.edu-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.tag{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);padding:6px 12px;border-radius:100px;transition:.3s}
+.tag:hover{color:var(--gold-soft);border-color:var(--line-gold)}
+.edu-badge{
+  text-align:center;flex:none;padding:16px 20px;border-radius:16px;border:1px dashed var(--line-gold);
+  background:rgba(214,178,94,.05);
+}
+.edu-badge b{font-family:var(--mono);font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);display:block}
+.edu-badge span{font-size:.78rem;color:var(--muted);display:block;margin-top:6px}
+@media(max-width:860px){
+  .edu-card{grid-template-columns:1fr;text-align:left;gap:22px;padding:34px 28px}
+  .edu-badge{justify-self:start}
+}
+
+/* ── CERTIFICATIONS ─────────────────────────── */
+.cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cert{
+  position:relative;padding:34px 30px 30px;border-radius:20px;border:1px solid var(--line);
+  background:var(--surface);overflow:hidden;transition:.5s var(--ease);
+}
+.cert::after{
+  content:'';position:absolute;inset:0;border-radius:inherit;padding:1px;opacity:0;transition:opacity .5s;
+  background:var(--gold-grad);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;
+}
+.cert:hover{transform:translateY(-7px);background:var(--surface-2)}
+.cert:hover::after{opacity:1}
+.cert-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
+.cert-ico{
+  width:54px;height:54px;border-radius:14px;display:grid;place-items:center;font-size:1.25rem;color:var(--gold);
+  background:rgba(214,178,94,.09);border:1px solid var(--line-gold);transition:.5s var(--ease);
+}
+.cert:hover .cert-ico{background:var(--gold-grad);color:#141005;border-color:transparent;box-shadow:0 10px 26px -8px rgba(214,178,94,.55)}
+.cert-no{font-family:var(--mono);font-size:.62rem;letter-spacing:.3em;color:var(--muted-2)}
+.cert h3{font-family:var(--serif);font-size:1.17rem;font-weight:700;line-height:1.32;min-height:3.1em}
+.cert .issuer{display:inline-flex;align-items:center;gap:8px;margin-top:14px;font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.cert .issuer i{color:var(--gold)}
+.cert p{color:var(--muted);font-weight:300;font-size:.86rem;margin-top:14px;line-height:1.65}
+.cert .spec{
+  margin-top:20px;display:inline-flex;align-items:center;gap:8px;
+  font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-soft);
+  border-top:1px solid var(--line);padding-top:16px;width:100%;
+}
+.cert .spec i{font-size:.7rem}
+.cert-note{
+  margin-top:34px;display:flex;align-items:center;gap:18px;padding:24px 30px;border-radius:var(--radius);
+  border:1px dashed var(--line-gold);background:rgba(214,178,94,.045);
+}
+.cert-note i{color:var(--gold);font-size:1.3rem}
+.cert-note p{font-size:.92rem;color:var(--muted);font-weight:300}
+.cert-note b{color:var(--gold-soft);font-weight:600}
+@media(max-width:980px){.cert-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.cert-grid{grid-template-columns:1fr}}
+
+/* ── SKILLS ─────────────────────────────────── */
+.skill-rows{border-top:1px solid var(--line)}
+.skill-row{
+  display:grid;grid-template-columns:110px 1fr auto;gap:30px;align-items:center;
+  padding:34px 22px;border-bottom:1px solid var(--line);position:relative;
+  transition:background .45s var(--ease),padding .45s var(--ease);cursor:default;
+}
+.skill-row::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--gold-grad);
+  transform:scaleY(0);transform-origin:top;transition:transform .5s var(--ease);
+}
+.skill-row:hover{background:rgba(214,178,94,.035);padding-left:34px}
+.skill-row:hover::before{transform:scaleY(1)}
+.skill-no{font-family:var(--mono);font-size:.78rem;letter-spacing:.2em;color:var(--muted-2);transition:color .4s}
+.skill-row:hover .skill-no{color:var(--gold)}
+.skill-main h3{font-family:var(--serif);font-size:1.42rem;font-weight:700;letter-spacing:.01em}
+.skill-main p{color:var(--muted);font-weight:300;font-size:.9rem;margin-top:8px;max-width:64ch}
+.skill-side{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;max-width:300px}
+@media(max-width:860px){
+  .skill-row{grid-template-columns:1fr;gap:14px}
+  .skill-side{justify-content:flex-start}
+}
+
+/* ── APPOINTMENT ────────────────────────────── */
+.appoint{background:linear-gradient(180deg,transparent,rgba(214,178,94,.028) 22%,rgba(214,178,94,.028) 78%,transparent)}
+.ap-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:56px;align-items:start}
+.ap-side .lead{margin-top:20px}
+.contact-cards{display:flex;flex-direction:column;gap:14px;margin-top:38px}
+.cc{
+  display:flex;align-items:center;gap:18px;padding:19px 22px;border-radius:16px;
+  border:1px solid var(--line);background:var(--surface);text-decoration:none;transition:.4s var(--ease);
+}
+.cc:hover{border-color:var(--line-gold);transform:translateX(7px);background:var(--surface-2)}
+.cc-ico{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:rgba(214,178,94,.1);color:var(--gold);font-size:1.02rem;flex:none;border:1px solid var(--line-gold)}
+.cc b{display:block;font-size:.92rem;color:var(--text);font-weight:600}
+.cc span{font-family:var(--mono);font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted-2)}
+.steps{margin-top:40px;border-top:1px solid var(--line);padding-top:32px}
+.step{display:flex;gap:20px;padding:14px 0;align-items:flex-start}
+.step b{
+  font-family:var(--mono);font-size:.7rem;color:var(--gold);width:34px;height:34px;border-radius:50%;
+  border:1px solid var(--line-gold);display:grid;place-items:center;flex:none;background:rgba(214,178,94,.06);
+}
+.step p{color:var(--muted);font-size:.9rem;font-weight:300}
+.step p b{color:var(--text);font-weight:500;display:inline;background:none;border:0;width:auto;height:auto}
+/* form */
+.form-card{
+  padding:46px 44px;border-radius:24px;border:1px solid var(--line);
+  background:linear-gradient(160deg,rgba(255,255,255,.045),rgba(255,255,255,.015));
+  position:relative;overflow:hidden;
+}
+.form-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:var(--gold-grad);opacity:.6}
+.form-head{margin-bottom:34px}
+.form-head h3{font-family:var(--serif);font-size:1.62rem;font-weight:700}
+.form-head p{color:var(--muted);font-size:.88rem;font-weight:300;margin-top:8px}
+.f-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.f-group{display:flex;flex-direction:column;gap:9px}
+.f-group.full{grid-column:1/-1}
+.f-group label{font-family:var(--mono);font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+.f-group label i{color:var(--gold);margin-right:7px;font-size:.68rem}
+.f-group input,.f-group select,.f-group textarea{
+  width:100%;padding:15px 17px;border-radius:13px;border:1px solid var(--line);
+  background:rgba(10,10,14,.55);color:var(--text);font-family:var(--sans);font-size:.93rem;font-weight:400;
+  outline:none;transition:border-color .35s,box-shadow .35s,background .35s;
+  -webkit-appearance:none;appearance:none;
+}
+.f-group select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23D6B25E' stroke-width='1.6' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 17px center;cursor:pointer}
+.f-group select option{background:#121218;color:var(--text)}
+.f-group textarea{resize:vertical;min-height:104px}
+.f-group input::placeholder,.f-group textarea::placeholder{color:#5d5b54}
+.f-group input:focus,.f-group select:focus,.f-group textarea:focus{
+  border-color:var(--line-gold);background:rgba(10,10,14,.8);
+  box-shadow:0 0 0 4px rgba(214,178,94,.09);
+}
+.f-group input::-webkit-calendar-picker-indicator{filter:invert(.8) sepia(.4) saturate(3) hue-rotate(5deg);cursor:pointer}
+input[type="date"]::-webkit-datetime-edit{color:var(--text)}
+.f-submit{
+  grid-column:1/-1;margin-top:6px;display:inline-flex;align-items:center;justify-content:center;gap:12px;
+  width:100%;padding:18px;border-radius:100px;border:0;cursor:pointer;
+  font-family:var(--sans);font-size:.8rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  color:#141005;background:var(--gold-grad);
+  box-shadow:0 12px 34px -10px rgba(214,178,94,.5);
+  transition:transform .4s var(--ease),box-shadow .4s,opacity .3s;
+}
+.f-submit:hover{transform:translateY(-2px);box-shadow:0 18px 44px -10px rgba(214,178,94,.65)}
+.f-submit:disabled{opacity:.6;cursor:wait;transform:none}
+.form-foot{grid-column:1/-1;text-align:center;font-size:.76rem;color:var(--muted-2);letter-spacing:.04em}
+.form-foot i{color:var(--gold);margin-right:6px}
+.f-msg{grid-column:1/-1;display:none;padding:15px 18px;border-radius:13px;font-size:.85rem;line-height:1.55;align-items:flex-start;gap:11px}
+.f-msg.err{display:flex;background:rgba(220,80,80,.1);border:1px solid rgba(220,80,80,.35);color:#f0a8a8}
+#spec-wrap{display:none}
+#spec-wrap.show{display:flex}
+/* success panel */
+.success{
+  display:none;text-align:center;padding:50px 20px;
+}
+.success.show{display:block;animation:fadeUp .7s var(--ease)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.success .ok-ring{
+  width:88px;height:88px;margin:0 auto 26px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(214,178,94,.09);border:1px solid var(--line-gold);color:var(--gold);font-size:2rem;
+  animation:popIn .6s var(--ease) .1s both;
+}
+@keyframes popIn{from{transform:scale(.4);opacity:0}to{transform:scale(1);opacity:1}}
+.success h3{font-family:var(--serif);font-size:1.7rem;margin-bottom:12px}
+.success p{color:var(--muted);font-weight:300;font-size:.94rem;max-width:46ch;margin:0 auto 26px}
+@media(max-width:980px){.ap-grid{grid-template-columns:1fr;gap:44px}}
+@media(max-width:640px){
+  .f-grid{grid-template-columns:1fr}
+  .form-card{padding:34px 24px}
+}
+
+/* ── FOOTER ─────────────────────────────────── */
+footer{border-top:1px solid var(--line);padding:60px 0 40px;background:linear-gradient(180deg,transparent,rgba(214,178,94,.03))}
+.foot-grid{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:26px}
+.foot-nav{display:flex;flex-wrap:wrap;gap:26px;list-style:none}
+.foot-nav a{color:var(--muted);text-decoration:none;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;transition:color .3s}
+.foot-nav a:hover{color:var(--gold-soft)}
+.foot-base{
+  margin-top:44px;padding-top:26px;border-top:1px solid var(--line);
+  display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;
+  font-family:var(--mono);font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted-2);
+}
+.foot-base i{color:var(--gold)}
+
+/* ── WhatsApp float ─────────────────────────── */
+.wa-float{
+  position:fixed;right:26px;bottom:26px;z-index:90;width:54px;height:54px;border-radius:50%;
+  display:grid;place-items:center;color:#fff;font-size:1.4rem;text-decoration:none;
+  background:linear-gradient(135deg,#2ee56b,#128c4b);
+  box-shadow:0 14px 34px -8px rgba(37,211,102,.55);
+  transition:transform .4s var(--ease),box-shadow .4s;
+}
+.wa-float:hover{transform:translateY(-4px) scale(1.05);box-shadow:0 20px 44px -8px rgba(37,211,102,.7)}
+.wa-float::after{content:'';position:absolute;inset:-5px;border-radius:50%;border:1px solid rgba(37,211,102,.4);animation:pulse 2.4s infinite}
+
+/* ── Misc ───────────────────────────────────── */
+@media(max-width:640px){
+  section{padding:80px 0}
+  .hero-stats{max-width:100%}
+  .stat b{font-size:1.7rem}
+  .portrait-chip{padding:10px 14px}
+  .portrait-chip i{width:26px;height:26px;font-size:.7rem}
+  .wa-float{right:18px;bottom:18px;width:48px;height:48px;font-size:1.2rem}
+}
+</style>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<!-- Ambient background -->
+<div class="bg-fx"><div class="glow glow-1"></div><div class="glow glow-2"></div><div class="glow glow-3"></div></div>
+<div class="hairline-v hv-1"></div>
+<div class="hairline-v hv-2"></div>
+
+<!-- ══════════ NAVIGATION ══════════ -->
+<nav id="nav">
+  <div class="nav-in">
+    <a class="logo" href="#home" aria-label="Zulkaif Akbar — home">
+      <span class="logo-mark">Z</span>
+      <span class="logo-txt"><b>Zulkaif Akbar</b><span>E-Commerce · AI</span></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="nav-cta" href="#appointment"><i class="fa-regular fa-calendar-check"></i> Book Appointment</a>
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ══════════ HERO ══════════ -->
+<header class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="hero-status rv"><span class="dot"></span> Available for Consultations</span>
+      <h1 class="rv rv-d1">Zulkaif <span class="row2">Akbar</span></h1>
+      <div class="hero-role rv rv-d2">
+        <span>E-Commerce Student</span><i class="fa-solid fa-diamond"></i>
+        <span>Digital Marketing</span><i class="fa-solid fa-diamond"></i>
+        <span>AI Creation</span><i class="fa-solid fa-diamond"></i>
+        <span>Social Media</span>
+      </div>
+      <p class="hero-pitch rv rv-d2">
+        BS <b>E-Commerce</b> scholar at the <b>University of Kamalia</b>, Google-certified across
+        business intelligence, analytics and AI — helping brands &amp; individuals grow through
+        <b>data-driven digital strategy</b>, modern AI tools and polished online presence.
+      </p>
+      <div class="hero-actions rv rv-d3">
+        <a class="btn btn-gold" href="#appointment"><i class="fa-regular fa-calendar-check"></i> Book a Session</a>
+        <a class="btn btn-line" href="#certifications"><i class="fa-solid fa-award"></i> Certifications</a>
+      </div>
+      <div class="hero-contact rv rv-d3">
+        <a class="chip" href="mailto:yourzugz@gmail.com"><i class="fa-regular fa-envelope"></i> yourzugz@gmail.com</a>
+        <a class="chip" href="tel:+923048316414"><i class="fa-solid fa-phone"></i> +92 304 8316414</a>
+        <span class="chip"><i class="fa-solid fa-location-dot"></i> Kamalia, Punjab, Pakistan</span>
+      </div>
+      <div class="hero-stats rv rv-d4">
+        <div class="stat"><b>06+</b><span>Google Certifications</span></div>
+        <div class="stat"><b>05</b><span>Professional Skills</span></div>
+        <div class="stat"><b>01</b><span>Goal — Excellence</span></div>
+      </div>
+    </div>
+
+    <div class="portrait-zone rv rv-d2">
+      <div class="portrait">
+        <div class="portrait-ring">
+          <div class="portrait-inner">
+            <img id="profile-photo" src="" alt="Zulkaif Akbar — Profile Photo">
+            <div class="avatar-fallback" id="avatarFallback">ZA<small>Profile Photo</small></div>
+          </div>
+        </div>
+        <div class="portrait-chip pc-1"><i class="fa-brands fa-google"></i><div><b>Google Certified</b><span>6 Credentials</span></div></div>
+        <div class="portrait-chip pc-2"><i class="fa-solid fa-graduation-cap"></i><div><b>BS E-Commerce</b><span>Univ. of Kamalia</span></div></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════ ABOUT ══════════ -->
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-copy">
+        <div class="sec-head rv" style="margin-bottom:0">
+          <span class="eyebrow">About Me</span>
+          <h2 class="h-sec">Where commerce meets <em>intelligence</em></h2>
+        </div>
+        <p class="rv rv-d1" style="margin-top:26px">
+          I'm <b>Zulkaif Akbar</b>, an undergraduate of <b>BS E-Commerce at the University of Kamalia</b> —
+          building a career at the intersection of online business, digital marketing and artificial
+          intelligence. My academic journey is deeply practical: while studying how digital commerce
+          works end-to-end, I've invested in world-class Google certifications to sharpen my edge in
+          analytics, AI tooling and business intelligence.
+        </p>
+        <p class="rv rv-d2">
+          From managing <b>social media accounts</b> and crafting marketing campaigns to designing
+          <b>AI-assisted content workflows</b>, I bring a blend of creativity and analytical thinking to
+          every project. I believe the future belongs to professionals who can read data, understand
+          people, and use modern AI tools to move faster — and that's exactly the skill set I've been
+          building, certificate by certificate.
+        </p>
+        <div class="about-quote rv rv-d3">"Turning data into decisions, and ideas into digital growth."</div>
+      </div>
+      <div class="fact-grid">
+        <div class="fact rv"><div class="k"><i class="fa-solid fa-graduation-cap"></i> Degree</div><div class="v">BS E-Commerce (Undergraduate)</div></div>
+        <div class="fact rv rv-d1"><div class="k"><i class="fa-solid fa-building-columns"></i> University</div><div class="v">University of Kamalia</div></div>
+        <div class="fact rv rv-d1"><div class="k"><i class="fa-solid fa-location-dot"></i> Location</div><div class="v">Kamalia, Punjab, Pakistan</div></div>
+        <div class="fact rv rv-d2"><div class="k"><i class="fa-solid fa-award"></i> Credentials</div><div class="v">6 Google Certifications</div></div>
+        <div class="fact rv rv-d2"><div class="k"><i class="fa-regular fa-envelope"></i> Email</div><div class="v"><a href="mailto:yourzugz@gmail.com">yourzugz@gmail.com</a></div></div>
+        <div class="fact rv rv-d3"><div class="k"><i class="fa-solid fa-phone"></i> Phone</div><div class="v"><a href="tel:+923048316414">+92 304 8316414</a></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ EDUCATION ══════════ -->
+<section id="education" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Education</span>
+      <h2 class="h-sec">Academic <em>Foundation</em></h2>
+    </div>
+    <div class="edu-card rv rv-d1">
+      <div class="edu-ico"><i class="fa-solid fa-graduation-cap"></i></div>
+      <div class="edu-mid">
+        <h3>Bachelor of Science in E-Commerce</h3>
+        <div class="uni">University of Kamalia — Kamalia, Punjab, Pakistan</div>
+        <p class="desc">
+          A forward-looking program covering the complete digital commerce ecosystem — from online
+          store management, digital payments and supply chains to e-marketing, consumer behaviour
+          and data-driven business strategy. Alongside my degree, I continuously upskill through
+          Google professional certifications to stay ahead of industry standards.
+        </p>
+        <div class="edu-tags">
+          <span class="tag">Digital Commerce</span>
+          <span class="tag">E-Marketing</span>
+          <span class="tag">Online Business Strategy</span>
+          <span class="tag">Data Analytics</span>
+          <span class="tag">AI in Business</span>
+        </div>
+      </div>
+      <div class="edu-badge"><b>In Progress</b><span>Ongoing — 2026</span></div>
+    </div>
+  </div>
+</section>
+<!-- ══════════ CERTIFICATIONS ══════════ -->
+<section id="certifications">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Google Certifications</span>
+      <h2 class="h-sec">Credentials that <em>prove the craft</em></h2>
+      <p class="lead">Six industry-recognized Google programs completed through Coursera — spanning business
+      intelligence, artificial intelligence, analytics, prompt engineering and cybersecurity — together with
+      their full specialization tracks.</p>
+    </div>
+    <div class="cert-grid">
+      <article class="cert rv">
+        <div class="cert-top"><div class="cert-ico"><i class="fa-solid fa-chart-column"></i></div><span class="cert-no">/ 01</span></div>
+        <h3>Google Business Intelligence</h3>
+        <span class="issuer"><i class="fa-brands fa-google"></i> Google · Coursera</span>
+        <p>Building BI pipelines and dashboards that turn raw data into clear, decision-ready insights for real business scenarios.</p>
+        <span class="spec"><i class="fa-solid fa-circle-check"></i> Specialization Completed</span>
+      </article>
+      <article class="cert rv rv-d1">
+        <div class="cert-top"><div class="cert-ico"><i class="fa-solid fa-bolt"></i></div><span class="cert-no">/ 02</span></div>
+        <h3>Google AI Essentials</h3>
+        <span class="issuer"><i class="fa-brands fa-google"></i> Google · Coursera</span>
+        <p>Hands-on use of AI tools to boost productivity — writing effective prompts and applying AI responsibly in daily workflows.</p>
+        <span class="spec"><i class="fa-solid fa-circle-check"></i> Specialization Completed</span>
+      </article>
+      <article class="cert rv rv-d2">
+        <div class="cert-top"><div class="cert-ico"><i class="fa-solid fa-chart-line"></i></div><span class="cert-no">/ 03</span></div>
+        <h3>Google Analytics</h3>
+        <span class="issuer"><i class="fa-brands fa-google"></i> Google · Coursera</span>
+        <p>Measuring, tracking and interpreting website &amp; campaign data — audience insights, conversions and performance reporting.</p>
+        <span class="spec"><i class="fa-solid fa-circle-check"></i> Specialization Completed</span>
+      </article>
+      <article class="cert rv">
+        <div class="cert-top"><div class="cert-ico"><i class="fa-solid fa-brain"></i></div><span class="cert-no">/ 04</span></div>
+        <h3>Google AI</h3>
+        <span class="issuer"><i class="fa-brands fa-google"></i> Google · Coursera</span>
+        <p>Core foundations of artificial intelligence and machine learning — how modern AI systems learn, reason and create value.</p>
+        <span class="spec"><i class="fa-solid fa-circle-check"></i> Specialization Completed</span>
+      </article>
+      <article class="cert rv rv-d1">
+        <div class="cert-top"><div class="cert-ico"><i class="fa-solid fa-comment-dots"></i></div><span class="cert-no">/ 05</span></div>
+        <h3>Google Prompt Engineering</h3>
+        <span class="issuer"><i class="fa-brands fa-google"></i> Google · Coursera</span>
+        <p>Designing precise, structured prompts for large language models — extracting reliable, high-quality output from AI systems.</p>
+        <span class="spec"><i class="fa-solid fa-circle-check"></i> Specialization Completed</span>
+      </article>
+      <article class="cert rv rv-d2">
+        <div class="cert-top"><div class="cert-ico"><i class="fa-solid fa-shield-halved"></i></div><span class="cert-no">/ 06</span></div>
+        <h3>Google Cybersecurity</h3>
+        <span class="issuer"><i class="fa-brands fa-google"></i> Google · Coursera</span>
+        <p>Security fundamentals — protecting systems, accounts and data, identifying risks and applying best-practice safeguards.</p>
+        <span class="spec"><i class="fa-solid fa-circle-check"></i> Specialization Completed</span>
+      </article>
+    </div>
+    <div class="cert-note rv rv-d3">
+      <i class="fa-solid fa-medal"></i>
+      <p><b>Specializations included:</b> the complete specialization tracks associated with each of these
+      Google programs have also been finished — covering deeper, multi-course study in every domain above.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SKILLS ══════════ -->
+<section id="skills" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Expertise</span>
+      <h2 class="h-sec">Professional <em>skill set</em></h2>
+    </div>
+    <div class="skill-rows">
+      <div class="skill-row rv">
+        <span class="skill-no">/ 01</span>
+        <div class="skill-main">
+          <h3>MS Office</h3>
+          <p>Advanced command of Word, Excel and PowerPoint — professional documents, data sheets, formulas, reports and polished presentations.</p>
+        </div>
+        <div class="skill-side"><span class="tag">Word</span><span class="tag">Excel</span><span class="tag">PowerPoint</span></div>
+      </div>
+      <div class="skill-row rv">
+        <span class="skill-no">/ 02</span>
+        <div class="skill-main">
+          <h3>Digital Marketing</h3>
+          <p>Strategy-driven campaigns across search and social — audience targeting, content planning, performance tracking and conversion thinking.</p>
+        </div>
+        <div class="skill-side"><span class="tag">Campaigns</span><span class="tag">SEO Basics</span><span class="tag">Analytics</span></div>
+      </div>
+      <div class="skill-row rv">
+        <span class="skill-no">/ 03</span>
+        <div class="skill-main">
+          <h3>AI Creation</h3>
+          <p>Creating content, visuals and workflows with modern AI tools — prompt engineering grounded in Google-certified practice.</p>
+        </div>
+        <div class="skill-side"><span class="tag">AI Tools</span><span class="tag">Prompting</span><span class="tag">Content</span></div>
+      </div>
+      <div class="skill-row rv">
+        <span class="skill-no">/ 04</span>
+        <div class="skill-main">
+          <h3>E-Commerce</h3>
+          <p>Online store operations from product listing to order flow — backed by an academic degree focused entirely on digital commerce.</p>
+        </div>
+        <div class="skill-side"><span class="tag">Store Ops</span><span class="tag">Listing</span><span class="tag">Strategy</span></div>
+      </div>
+      <div class="skill-row rv">
+        <span class="skill-no">/ 05</span>
+        <div class="skill-main">
+          <h3>Social Media Management</h3>
+          <p>Running and growing social accounts — content calendars, community engagement, brand voice and consistent, on-brand presence.</p>
+        </div>
+        <div class="skill-side"><span class="tag">Pages</span><span class="tag">Content Plans</span><span class="tag">Engagement</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ══════════ APPOINTMENT / BOOKING ══════════ -->
+<section id="appointment" class="appoint">
+  <div class="wrap">
+    <div class="ap-grid">
+      <div class="ap-side">
+        <div class="sec-head rv" style="margin-bottom:0">
+          <span class="eyebrow">Appointments</span>
+          <h2 class="h-sec">Book a <em>session</em> with me</h2>
+          <p class="lead">Whether you need help with digital marketing, social media management, e-commerce
+          setup or AI-powered content — fill in the form and your request lands directly in my inbox.
+          I'll confirm your slot by email or phone.</p>
+        </div>
+        <div class="contact-cards">
+          <a class="cc rv rv-d1" href="mailto:yourzugz@gmail.com">
+            <span class="cc-ico"><i class="fa-regular fa-envelope"></i></span>
+            <div><b>yourzugz@gmail.com</b><span>Email — Direct Line</span></div>
+          </a>
+          <a class="cc rv rv-d2" href="tel:+923048316414">
+            <span class="cc-ico"><i class="fa-solid fa-phone"></i></span>
+            <div><b>+92 304 8316414</b><span>Phone / WhatsApp</span></div>
+          </a>
+          <div class="cc rv rv-d3">
+            <span class="cc-ico"><i class="fa-solid fa-location-dot"></i></span>
+            <div><b>Kamalia, Punjab, Pakistan</b><span>On-site · Remote · Flexible</span></div>
+          </div>
+        </div>
+        <div class="steps rv rv-d3">
+          <div class="step"><b>01</b><p><b>Fill the form</b> — share your name, contact details and what you do.</p></div>
+          <div class="step"><b>02</b><p><b>I receive it by email</b> — delivered instantly to my inbox via FormSubmit.</p></div>
+          <div class="step"><b>03</b><p><b>We confirm the slot</b> — I'll get back to you to lock the date &amp; time.</p></div>
+        </div>
+      </div>
+
+      <div class="form-card rv rv-d1">
+        <!-- Success panel (shown after successful send) -->
+        <div class="success" id="successPanel">
+          <div class="ok-ring"><i class="fa-solid fa-check"></i></div>
+          <h3>Request Received</h3>
+          <p>Thank you — your appointment request has been sent successfully.<br>
+          I have received your details at my email and will confirm your session shortly.</p>
+          <button class="btn btn-line" type="button" id="bookAgain"><i class="fa-solid fa-rotate-right"></i> Book Another Session</button>
+        </div>
+
+        <form id="bookForm" action="https://formsubmit.co/yourzugz@gmail.com" method="POST">
+          <div class="form-head">
+            <h3>Appointment Request</h3>
+            <p><i class="fa-solid fa-lock" style="color:var(--gold)"></i>&nbsp; Your details are sent securely to Zulkaif's email inbox.</p>
+          </div>
+          <div class="f-grid">
+            <div class="f-group">
+              <label for="f-name"><i class="fa-solid fa-user"></i> Full Name *</label>
+              <input type="text" id="f-name" name="name" placeholder="e.g. Ahmed Raza" required autocomplete="name">
+            </div>
+            <div class="f-group">
+              <label for="f-father"><i class="fa-solid fa-user-group"></i> Father's Name *</label>
+              <input type="text" id="f-father" name="Father's Name" placeholder="e.g. Muhammad Akbar" required>
+            </div>
+            <div class="f-group">
+              <label for="f-email"><i class="fa-regular fa-envelope"></i> Email Address *</label>
+              <input type="email" id="f-email" name="email" placeholder="you@example.com" required autocomplete="email">
+            </div>
+            <div class="f-group">
+              <label for="f-phone"><i class="fa-solid fa-phone"></i> Phone Number *</label>
+              <input type="tel" id="f-phone" name="Phone" placeholder="+92 3XX XXXXXXX" pattern="[0-9+\s\-()]{7,20}" required autocomplete="tel">
+            </div>
+            <div class="f-group">
+              <label for="f-prof"><i class="fa-solid fa-briefcase"></i> Your Profession *</label>
+              <select id="f-prof" name="Profession" required>
+                <option value="" selected disabled>Select your profession…</option>
+                <option>Teacher</option>
+                <option>Student</option>
+                <option>Business Professional</option>
+                <option>Freelancer</option>
+                <option value="Other">Other (specify)</option>
+              </select>
+            </div>
+            <div class="f-group" id="spec-wrap">
+              <label for="f-spec"><i class="fa-solid fa-pen"></i> Please Specify *</label>
+              <input type="text" id="f-spec" name="Profession (Other)" placeholder="Your profession">
+            </div>
+            <div class="f-group">
+              <label for="f-date"><i class="fa-regular fa-calendar"></i> Preferred Date *</label>
+              <input type="date" id="f-date" name="Preferred Date" required>
+            </div>
+            <div class="f-group">
+              <label for="f-time"><i class="fa-regular fa-clock"></i> Preferred Time *</label>
+              <select id="f-time" name="Preferred Time" required>
+                <option value="" selected disabled>Select a time slot…</option>
+                <option>Morning (9 AM – 12 PM)</option>
+                <option>Afternoon (12 PM – 4 PM)</option>
+                <option>Evening (4 PM – 8 PM)</option>
+              </select>
+            </div>
+            <div class="f-group full">
+              <label for="f-msg"><i class="fa-regular fa-comment-dots"></i> Session Topic / Message (optional)</label>
+              <textarea id="f-msg" name="Message" placeholder="Briefly tell me what you'd like to discuss — digital marketing, e-commerce, social media, AI…"></textarea>
+            </div>
+            <!-- FormSubmit configuration -->
+            <input type="hidden" name="_subject" value="New Appointment Request — Zulkaif Akbar Portfolio">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+            <button class="f-submit" type="submit" id="submitBtn">
+              <i class="fa-regular fa-paper-plane"></i> Send Appointment Request
+            </button>
+            <div class="f-msg" id="formMsg"><i class="fa-solid fa-triangle-exclamation" style="margin-top:3px"></i><span id="formMsgText"></span></div>
+            <p class="form-foot"><i class="fa-solid fa-shield-halved"></i> Submitting sends your details to yourzugz@gmail.com — used only to schedule your session.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot-grid">
+      <a class="logo" href="#home">
+        <span class="logo-mark">Z</span>
+        <span class="logo-txt"><b>Zulkaif Akbar</b><span>E-Commerce · AI</span></span>
+      </a>
+      <ul class="foot-nav">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#appointment">Book Appointment</a></li>
+      </ul>
+    </div>
+    <div class="foot-base">
+      <span>© <span id="year"></span> Zulkaif Akbar — All rights reserved</span>
+      <span><i class="fa-solid fa-code"></i> Designed with precision · Kamalia, Pakistan</span>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp float -->
+<a class="wa-float" href="https://wa.me/923048316414?text=Hello%20Zulkaif%2C%20I%27d%20like%20to%20book%20a%20session." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+<script>
+(function(){
+  'use strict';
+
+  /* ── Year ── */
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  /* ── Profile photo: show elegant monogram until a photo src exists ── */
+  var photo = document.getElementById('profile-photo');
+  var fallback = document.getElementById('avatarFallback');
+  function checkPhoto(){
+    if(photo.getAttribute('src') && photo.getAttribute('src').trim() !== ''){
+      photo.style.display = 'block';
+      fallback.style.display = 'none';
+    }else{
+      photo.style.display = 'none';
+      fallback.style.display = 'grid';
+    }
+  }
+  photo.addEventListener('error', function(){ photo.style.display='none'; fallback.style.display='grid'; });
+  checkPhoto();
+
+  /* ── Nav scrolled state ── */
+  var nav = document.getElementById('nav');
+  function onScroll(){ nav.classList.toggle('scrolled', window.scrollY > 30); }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* ── Mobile menu ── */
+  var burger = document.getElementById('burger');
+  var navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', function(){
+    var open = navLinks.classList.toggle('show');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  navLinks.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      navLinks.classList.remove('show');
+      burger.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+
+  /* ── Reveal on scroll ── */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+
+  /* ── Active nav link ── */
+  var sections = ['about','education','certifications','skills','appointment'];
+  var links = {};
+  document.querySelectorAll('.nav-links a').forEach(function(a){
+    var id = (a.getAttribute('href')||'').replace('#','');
+    if(id) links[id] = a;
+  });
+  var secIO = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      var link = links[e.target.id];
+      if(!link) return;
+      if(e.isIntersecting){
+        document.querySelectorAll('.nav-links a').forEach(function(a){ a.classList.remove('active'); });
+        link.classList.add('active');
+      }
+    });
+  }, {rootMargin:'-38% 0px -55% 0px'});
+  sections.forEach(function(id){
+    var s = document.getElementById(id);
+    if(s) secIO.observe(s);
+  });
+
+  /* ── Date: min = today ── */
+  var dateInput = document.getElementById('f-date');
+  var today = new Date();
+  var iso = today.getFullYear() + '-' + String(today.getMonth()+1).padStart(2,'0') + '-' + String(today.getDate()).padStart(2,'0');
+  dateInput.min = iso;
+
+  /* ── Profession "Other" → specify field ── */
+  var prof = document.getElementById('f-prof');
+  var specWrap = document.getElementById('spec-wrap');
+  var specInput = document.getElementById('f-spec');
+  prof.addEventListener('change', function(){
+    var other = prof.value === 'Other';
+    specWrap.classList.toggle('show', other);
+    specInput.required = other;
+    if(!other) specInput.value = '';
+  });
+
+  /* ── FormSubmit AJAX booking ── */
+  var form = document.getElementById('bookForm');
+  var btn = document.getElementById('submitBtn');
+  var msg = document.getElementById('formMsg');
+  var msgText = document.getElementById('formMsgText');
+  var success = document.getElementById('successPanel');
+  var EMAIL = 'yourzugz@gmail.com';
+
+  function showError(t){
+    msgText.textContent = t;
+    msg.classList.add('err');
+    msg.scrollIntoView({behavior:'smooth', block:'nearest'});
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    msg.classList.remove('err');
+
+    if(form.querySelector('input[name="_honey"]').value){ return; } /* bot trap */
+
+    var data = {
+      _subject: 'New Appointment Request — Zulkaif Akbar Portfolio',
+      _template: 'table',
+      _captcha: 'false',
+      _autoresponse: 'Thank you for booking a session with Zulkaif Akbar! Your request has been received — you will be contacted soon at this email or by phone to confirm your appointment.'
+    };
+    var fields = form.querySelectorAll('input[name], select[name], textarea[name]');
+    fields.forEach(function(f){
+      if(f.type === 'hidden' || f.name === '_honey') return;
+      if(f.value !== '') data[f.name] = f.value;
+    });
+
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Sending…';
+
+    fetch('https://formsubmit.co/ajax/' + EMAIL, {
+      method: 'POST',
+      headers: {'Content-Type':'application/json', 'Accept':'application/json'},
+      body: JSON.stringify(data)
+    })
+    .then(function(res){
+      return res.json().then(function(j){ return {ok: res.ok, j: j}; });
+    })
+    .then(function(r){
+      var ok = r.ok && (r.j.success === true || r.j.success === 'true');
+      if(!ok) throw new Error(r.j.message || 'Send failed');
+      form.style.display = 'none';
+      success.classList.add('show');
+    })
+    .catch(function(err){
+      showError('Could not send your request (' + (err.message || 'network error') + '). ' +
+        'Please check your internet connection, or email me directly at yourzugz@gmail.com / call +92 304 8316414.');
+    })
+    .finally(function(){
+      btn.disabled = false;
+      btn.innerHTML = '<i class="fa-regular fa-paper-plane"></i> Send Appointment Request';
+    });
+  });
+
+  /* ── Book again → reset form ── */
+  document.getElementById('bookAgain').addEventListener('click', function(){
+    form.reset();
+    specWrap.classList.remove('show');
+    specInput.required = false;
+    success.classList.remove('show');
+    form.style.display = '';
+  });
+})();
+</script>
+</body>
+</html>
